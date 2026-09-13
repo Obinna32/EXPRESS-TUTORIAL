@@ -8,6 +8,14 @@ router.get('/', (req, res) => {
     ])
 });
 
+router.get('/special', (req, res) => {
+    const specialProduct = {
+        name: 'Coding2GO JS Course',
+        price: 50
+    }
+    res.json(specialProduct);
+})
+
 router.get('/:id', (req, res) => {
     const id = Number(req.params.id);
 
